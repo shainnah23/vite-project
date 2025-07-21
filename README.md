@@ -72,4 +72,4 @@ The application uses a `db.json` file to store goal data with the following stru
     }
   ]
 }
-```
+```## Testing\n\nRun tests with `npm test`
