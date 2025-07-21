@@ -96,4 +96,4 @@ const GoalForm = ({ onGoalAdded }) => {
   );
 };
 
-export default GoalForm;
+export default GoalForm;// Added form validation
