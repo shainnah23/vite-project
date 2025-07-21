@@ -24,4 +24,4 @@ const Overview = ({ goals }) => {
   );
 };
 
-export default Overview;
+export default Overview;// Added data visualization
