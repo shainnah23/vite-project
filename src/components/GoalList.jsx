@@ -17,4 +17,4 @@ const GoalList = ({ goals, onUpdate }) => {
   );
 };
 
-export default GoalList;
+export default GoalList;// Added sorting functionality
