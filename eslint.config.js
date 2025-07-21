@@ -27,3 +27,4 @@ export default defineConfig([
     },
   },
 ])
+// Added stricter rules
