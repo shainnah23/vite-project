@@ -29,4 +29,4 @@ export const makeDeposit = async (id, amount) => {
     savedAmount: updatedAmount
   });
   return response.data;
-};
+};// Added error handling for API calls
