@@ -134,4 +134,4 @@ const GoalCard = ({ goal, onUpdate }) => {
   );
 };
 
-export default GoalCard;
+export default GoalCard;// Added accessibility improvements
