@@ -34,10 +34,11 @@ A React application for tracking financial savings goals with CRUD operations an
 
 ### Running the Application
 
+#### Development Mode
 Run both the React development server and JSON Server concurrently:
 
 ```
-npm run start
+npm run start:dev
 ```
 
 This will start:
@@ -53,6 +54,23 @@ npm run server
 # Run React development server only
 npm run dev
 ```
+
+#### Production Mode
+For production deployment:
+
+1. Set your production API URL in `.env.production`:
+   ```
+   VITE_API_URL=https://your-production-api.com/api
+   ```
+
+2. Build the application:
+   ```
+   npm run build
+   ```
+
+3. Deploy the `dist` folder to your hosting service
+
+4. Make sure your production API supports the same endpoints as json-server
 
 ## Data Structure
 
