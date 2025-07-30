@@ -35,6 +35,15 @@ header {
   text-align: center;
 }
 
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .loading {
   text-align: center;
   padding: 20px;

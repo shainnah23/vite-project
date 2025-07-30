@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { updateGoal, deleteGoal, makeDeposit } from '../services/api';
 
-const GoalCard = ({ goal, onUpdate }) => {
+const GoalCard = ({ goal, onUpdate, isOffline }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedGoal, setEditedGoal] = useState(goal);
   const [depositAmount, setDepositAmount] = useState('');
@@ -22,6 +22,11 @@ const GoalCard = ({ goal, onUpdate }) => {
   };
   
   const handleSave = async () => {
+    if (isOffline) {
+      alert('Cannot edit goals in demo mode. Please connect to API.');
+      return;
+    }
+    
     try {
       await updateGoal(goal.id, editedGoal);
       setIsEditing(false);
@@ -32,6 +37,11 @@ const GoalCard = ({ goal, onUpdate }) => {
   };
   
   const handleDelete = async () => {
+    if (isOffline) {
+      alert('Cannot delete goals in demo mode. Please connect to API.');
+      return;
+    }
+    
     try {
       await deleteGoal(goal.id);
       onUpdate();
@@ -42,6 +52,11 @@ const GoalCard = ({ goal, onUpdate }) => {
   
   const handleDeposit = async () => {
     if (!depositAmount || isNaN(depositAmount) || Number(depositAmount) <= 0) return;
+    
+    if (isOffline) {
+      alert('Cannot make deposits in demo mode. Please connect to API.');
+      return;
+    }
     
     try {
       await makeDeposit(goal.id, Number(depositAmount));

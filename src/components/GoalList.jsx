@@ -1,6 +1,6 @@
 import GoalCard from './GoalCard';
 
-const GoalList = ({ goals, onUpdate }) => {
+const GoalList = ({ goals, onUpdate, isOffline }) => {
   return (
     <div className="goal-list">
       <h2>Your Savings Goals</h2>
@@ -9,7 +9,7 @@ const GoalList = ({ goals, onUpdate }) => {
       ) : (
         <div className="goals-container">
           {goals.map(goal => (
-            <GoalCard key={goal.id} goal={goal} onUpdate={onUpdate} />
+            <GoalCard key={goal.id} goal={goal} onUpdate={onUpdate} isOffline={isOffline} />
           ))}
         </div>
       )}
