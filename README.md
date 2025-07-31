@@ -34,25 +34,29 @@ A React application for tracking financial savings goals with CRUD operations an
 
 ### Running the Application
 
-#### Development Mode
-Run both the React development server and JSON Server concurrently:
+#### Automatic Setup (Recommended)
+Just run:
 
 ```
-npm run start:dev
+npm start
 ```
 
-This will start:
-- JSON Server on http://localhost:3000
-- React development server on http://localhost:5173
+This will automatically:
+- Check if json-server is running
+- Start json-server if needed
+- Start the React development server
+- Open your browser to http://localhost:5173
 
+#### Manual Setup
 Alternatively, you can run them separately:
 
 ```
-# Run JSON Server only
-npm run server
+# Run both servers concurrently
+npm run start:dev
 
-# Run React development server only
-npm run dev
+# Or run them separately:
+npm run server  # JSON Server
+npm run dev     # React dev server
 ```
 
 #### Production Mode

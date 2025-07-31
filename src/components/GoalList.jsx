@@ -1,6 +1,6 @@
 import GoalCard from './GoalCard';
 
-const GoalList = ({ goals, onUpdate, isOffline }) => {
+const GoalList = ({ goals, onUpdate }) => {
   return (
     <div className="goal-list">
       <h2>Your Savings Goals</h2>
@@ -9,7 +9,7 @@ const GoalList = ({ goals, onUpdate, isOffline }) => {
       ) : (
         <div className="goals-container">
           {goals.map(goal => (
-            <GoalCard key={goal.id} goal={goal} onUpdate={onUpdate} isOffline={isOffline} />
+            <GoalCard key={goal.id} goal={goal} onUpdate={onUpdate} />
           ))}
         </div>
       )}
@@ -17,4 +17,4 @@ const GoalList = ({ goals, onUpdate, isOffline }) => {
   );
 };
 
-export default GoalList;// Added sorting functionality
+export default GoalList;

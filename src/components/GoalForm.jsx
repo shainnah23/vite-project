@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createGoal } from '../services/api';
 
-const GoalForm = ({ onGoalAdded, isOffline }) => {
+const GoalForm = ({ onGoalAdded }) => {
   const initialState = {
     name: '',
     targetAmount: '',
@@ -25,11 +25,6 @@ const GoalForm = ({ onGoalAdded, isOffline }) => {
     
     if (!formData.name || !formData.targetAmount || !formData.category || !formData.deadline) {
       alert('Please fill in all fields');
-      return;
-    }
-    
-    if (isOffline) {
-      alert('Cannot add goals in demo mode. Please connect to API.');
       return;
     }
     
@@ -101,4 +96,4 @@ const GoalForm = ({ onGoalAdded, isOffline }) => {
   );
 };
 
-export default GoalForm;// Added form validation
+export default GoalForm;
